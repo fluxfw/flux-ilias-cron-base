@@ -1,0 +1,14 @@
+{
+  "description": "ILIAS base cron docker image (Experimental Beta Version)",
+  "keywords": [
+    "alpine",
+    "base",
+    "beta",
+    "cron",
+    "docker",
+    "experimental",
+    "ilias",
+    "php"
+  ],
+  "homepage": "https://github.com/fluxapps/FluxIliasCronBase"
+}
