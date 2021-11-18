@@ -1,6 +1,6 @@
 {
   "description": "ILIAS base cron docker image (Experimental Beta Version)",
-  "keywords": [
+  "topics": [
     "alpine",
     "base",
     "beta",
