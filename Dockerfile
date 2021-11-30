@@ -1,4 +1,5 @@
-ARG ILIAS_BASE_IMAGE
+ARG ILIAS_BASE_IMAGE=docker-registry.fluxpublisher.ch/flux-ilias/ilias-base:php8.0
+
 FROM $ILIAS_BASE_IMAGE
 
 LABEL org.opencontainers.image.source="https://github.com/fluxapps/flux-ilias-cron-base"
