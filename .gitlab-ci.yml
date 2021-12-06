@@ -6,7 +6,7 @@ build:
   script:
     - echo -n $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY;
       for php_version in $PHP_VERSIONS; do
-        docker build . --pull --build-arg ILIAS_BASE_IMAGE=$CI_REGISTRY/$CI_PROJECT_NAMESPACE/flux-ilias-ilias-base:php$php_version -t $CI_REGISTRY_IMAGE:php$php_version;
+        docker build . --pull --build-arg FLUX_ILIAS_BASE_IMAGE=$CI_REGISTRY/$CI_PROJECT_NAMESPACE/flux-ilias-ilias-base:php$php_version -t $CI_REGISTRY_IMAGE:php$php_version;
         docker push $CI_REGISTRY_IMAGE:php$php_version;
       done;
       docker logout $CI_REGISTRY;
