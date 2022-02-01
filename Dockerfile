@@ -4,6 +4,6 @@ FROM $FLUX_ILIAS_BASE_IMAGE
 
 LABEL org.opencontainers.image.source="https://github.com/fluxapps/flux-ilias-cron-base"
 
-COPY . /flux-ilias-cron-base
-
 ENTRYPOINT ["/flux-ilias-cron-base/bin/entrypoint.sh"]
+
+COPY . /flux-ilias-cron-base
