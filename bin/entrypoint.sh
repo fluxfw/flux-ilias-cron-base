@@ -31,8 +31,8 @@ else
 fi
 
 echo "Generate cron config"
-echo "$ILIAS_CRON_PERIOD su-exec www-data:www-data $(which php) $ILIAS_WEB_DIR/cron/cron.php \"$ILIAS_CRON_USER_LOGIN\" \"$(getFileEnv ILIAS_CRON_USER_PASSWORD)\" \"$ILIAS_COMMON_CLIENT_ID\"" > "$ILIAS_CRON_FILE"
-crontab "$ILIAS_CRON_FILE"
+echo "$ILIAS_CRON_PERIOD $(which php) $ILIAS_WEB_DIR/cron/cron.php \"$ILIAS_CRON_USER_LOGIN\" \"$(getFileEnv ILIAS_CRON_USER_PASSWORD)\" \"$ILIAS_COMMON_CLIENT_ID\"" > "$ILIAS_CRON_FILE"
+crontab -u www-data "$ILIAS_CRON_FILE"
 
 echo "Unset ILIAS env variables (For not show in PHP variables or log files)"
 for var in $(printenv | grep "ILIAS_" | sed 's/=.*$//'); do
