@@ -1,6 +1,6 @@
 # flux-ilias-cron-base
 
-Experimental Beta Version
+ILIAS base cron docker image
 
 First look at [flux-ilias](https://github.com/fluxapps/flux-ilias)
 
