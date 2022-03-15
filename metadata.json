@@ -1,14 +1,12 @@
 {
-  "description": "ILIAS base cron docker image (Experimental Beta Version)",
-  "topics": [
-    "alpine",
-    "base",
-    "beta",
-    "cron",
-    "docker",
-    "experimental",
-    "ilias",
-    "php"
-  ],
-  "homepage": "https://github.com/fluxapps/flux-ilias-cron-base"
+    "description": "ILIAS base cron docker image",
+    "topics": [
+        "alpine",
+        "base",
+        "cron",
+        "docker",
+        "ilias",
+        "php"
+    ],
+    "homepage": "https://github.com/fluxapps/flux-ilias-cron-base"
 }
