@@ -1,4 +1,4 @@
-ARG FLUX_ILIAS_BASE_IMAGE=docker-registry.fluxpublisher.ch/flux-ilias/ilias-base
+ARG FLUX_ILIAS_BASE_IMAGE=fluxfw/flux-ilias-ilias-base
 ARG PHP_VERSION
 FROM $FLUX_ILIAS_BASE_IMAGE:php$PHP_VERSION
 
