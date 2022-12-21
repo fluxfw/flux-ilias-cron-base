@@ -20,7 +20,6 @@ ILIAS_COMMON_CLIENT_ID="${ILIAS_COMMON_CLIENT_ID:=default}"
 
 ILIAS_CRON_USER_LOGIN="${ILIAS_CRON_USER_LOGIN:=cron}"
 
-ILIAS_CRON_FILE="${ILIAS_CRON_FILE:=/etc/periodic/ilias}"
 ILIAS_CRON_PERIOD="${ILIAS_CRON_PERIOD:=*/5 * * * *}"
 
 if [ -f "$ILIAS_FILESYSTEM_INI_PHP_FILE" ]; then
@@ -31,8 +30,7 @@ else
 fi
 
 echo "Generate cron config"
-echo "$ILIAS_CRON_PERIOD $(which php) $ILIAS_WEB_DIR/cron/cron.php \"$ILIAS_CRON_USER_LOGIN\" \"$(getFileEnv ILIAS_CRON_USER_PASSWORD)\" \"$ILIAS_COMMON_CLIENT_ID\"" > "$ILIAS_CRON_FILE"
-crontab -u www-data "$ILIAS_CRON_FILE"
+echo "$ILIAS_CRON_PERIOD php $ILIAS_WEB_DIR/cron/cron.php \"$ILIAS_CRON_USER_LOGIN\" \"$(getFileEnv ILIAS_CRON_USER_PASSWORD)\" \"$ILIAS_COMMON_CLIENT_ID\"" > /etc/crontabs/www-data
 
 echo "Start cron"
 exec crond -f
